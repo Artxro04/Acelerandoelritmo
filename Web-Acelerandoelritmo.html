@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento de Carreras y Conciertos</title>
+    <style>
+        /* Estilos base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            background-image: url('https://example.com/background-image.jpg');
+            background-size: cover;
+        }
+        header {
+            background: linear-gradient(to right, #111, #333);
+            color: #FFD700;
+            text-align: center;
+            padding: 30px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+        .logo {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .container {
+            width: 90%;
+            margin: 30px auto;
+            background: rgba(30, 30, 30, 0.85);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 255, 0, 0.3);
+        }
+        .location, .tickets, .schedule, .contact {
+            padding: 20px;
+            margin-bottom: 20px;
+            background: rgba(255, 215, 0, 0.9);
+            border-radius: 8px;
+            color: #000;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .tickets {
+            display: flex;
+            justify-content: space-around;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            transition: background 0.3s;
+            box-shadow: 0px 6px 12px rgba(255, 0, 0, 0.4);
+        }
+        .button:hover {
+            background-color: darkred;
+        }
+        .button.vip {
+            background-color: #FF8C00;
+        }
+        .button.vip:hover {
+            background-color: #FF4500;
+        }
+        .venue-image {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(255, 255, 0, 0.5);
+        }
+        h2 {
+            color: #FFD700;
+            font-size: 2em;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .artist-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .artist-container div {
+            width: 200px;
+            margin: 15px;
+            background: #444;
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .artist-container div:hover {
+            transform: scale(1.1);
+            background: #555;
+        }
+        .artist-image {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            cursor: pointer;
+        }
+        .schedule p {
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: #222;
+        }
+        .contact a {
+            color: #FFD700;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #111;
+            color: #FFD700;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        .social {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        .social a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+		/* Estilo de horario */
+        .schedule {
+            background: rgba(255, 215, 0, 0.9);
+            color: #222;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.6);
+        }
+        .schedule-item {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 15px 0;
+            padding: 10px;
+            border-bottom: 1px solid #333;
+        }
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Evento de Carreras y Conciertos</h1>
+    <img src="https://i.imgur.com/5SsHxaT.png" alt="Logo" class="logo">
+</header>
+
+<div class="container">
+    <div class="location">
+        <p><strong>Fecha:</strong> 7 de diciembre de 2024</p>
+        <p><strong>Lugar:</strong> <a href="https://www.jarama.org/" target="_blank">Circuito del Jarama, Madrid</a></p>
+        <p><strong>Precio de la entrada:</strong> 30€ entrada general | 60€ entrada VIP</p>
+    </div>
+
+    <div class="tickets">
+        <a href="#" class="button">Comprar Entrada General</a>
+        <a href="#" class="button vip">Comprar Entrada VIP</a>
+    </div>
+
+    <a href="https://www.jarama.org/" target="_blank">
+        <img src="https://www.race.es/race.es/wp-content/uploads/2015/09/circuito_jarama_car5.jpg" alt="Circuito del Jarama" class="venue-image">
+    </a>
+
+    <div class="container">
+    <h2>Descripción del Evento</h2> <b/>
+    <div class="event-description">
+        <p>
+            ¡Prepárate para una experiencia épica! Te invitamos a una jornada sin igual, donde la velocidad y la música se combinan para crear un espectáculo inolvidable.
+            Vive la emoción de las carreras de camiones y "Monster Trucks" rugiendo en el asfalto, mientras los mejores artistas de la escena urbana encienden el ambiente con ritmos que no te dejarán parar.
+        </p>
+        <p>
+            Desde las acrobacias y derrapes de los camiones tuneados hasta el explosivo DJ Set final, cada momento estará lleno de adrenalina y buena música. 
+            ¡No te pierdas la oportunidad de ser parte de este evento único!
+        </p>
+    </div>
+</div>
+
+    <div class="social">
+        <p>Síguenos en Instagram: <a href="https://instagram.com/_acelerandoelritmo_" target="_blank">@_acelerandoelritmo_</a></p>
+    </div>
+
+    <h2>Artistas Invitados</h2>
+    <div class="artist-container">
+        <div>
+            <a href="https://es.wikipedia.org/wiki/Omar_Montes" target="_blank">
+                <p><strong>Omar Montes</strong></p>
+                <img src="https://images.xceed.me/artists/covers/omar-montes-artist-xceed-cover-b054.jpg" alt="Omar Montes" class="artist-image">
+            </a>
+        </div>
+        <div>
+            <a href="https://fanmusicfest.com/content/israel-b" target="_blank">
+                <p><strong>Israel B</strong></p>
+                <img src="https://bime.org/wp-content/uploads/2023/10/Foto2_Israel-B-scaled.jpeg" alt="Israel B" class="artist-image">
+            </a>
+        </div>
+        <div>
+            <a href="https://en.wikipedia.org/wiki/Yung_Beef" target="_blank">
+                <p><strong>Yung Beef</strong></p>
+                <img src="https://www.mondosonoro.com/wp-content/uploads/2016/08/Yung-Beef-899x600.jpg" alt="Yung Beef" class="artist-image">
+            </a>
+        </div>
+    </div>
+
+   <h2>Horario del Evento</h2>
+    <div class="schedule">
+        <div class="schedule-item"><strong>15:00 PM:</strong> Apertura de acceso para los asistentes</div>
+        <div class="schedule-item"><strong>15:30 PM:</strong> Primera carrera (5 camiones, 3 vueltas)</div>
+        <div class="schedule-item"><strong>16:15 - 16:30 PM:</strong> Entrega de trofeo y concierto de Omar Montes</div>
+        <div class="schedule-item"><strong>17:30 PM:</strong> Espectáculo de camiones tuneados</div>
+        <div class="schedule-item"><strong>18:30 PM:</strong> Concierto de Israel B con Lil Pekeño, Ergo Pro y Gloosito</div>
+        <div class="schedule-item"><strong>19:45 PM:</strong> Última carrera (5 Monster Trucks)</div>
+        <div class="schedule-item"><strong>20:00 PM:</strong> Concierto de Yung Beef</div>
+        <div class="schedule-item"><strong>22:30 - 03:00 AM:</strong> DJ Set y exposición de vehículos</div>
+    </div>
+
+    <h2>Contacto</h2>
+    <div class="contact">
+        <p>Para más información, contáctanos: <a href="mailto:arturocabada2@gmail.com">arturocabada2@gmail.com
